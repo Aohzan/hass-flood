@@ -1,0 +1,7 @@
+{
+  "name": "Flood",
+  "country": "US",
+  "domains": ["sensor", "binary_sensor", "select"],
+  "render_readme": true,
+  "iot_class": ["Local Polling"]
+}

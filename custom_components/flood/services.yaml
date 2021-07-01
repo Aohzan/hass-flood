@@ -1,0 +1,6 @@
+stop_all_torrents:
+  name: Stop all torrents
+  description: Ask to Flood to stop all torrents
+start_all_torrents:
+  name: Start all torrents
+  description: Ask to Flood to start all torrents

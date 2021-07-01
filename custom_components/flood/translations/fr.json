@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Paramètres Flood",
+        "description": "Paramètres de connexion.",
+        "data": {
+          "host": "Host (IP ou DNS)",
+          "port": "Port",
+          "scan_interval": "Secondes entre chaque mises à jour",
+          "username": "Nom d'utilisateur",
+          "password": "Mot de passe"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Problème de connexion",
+      "invalid_auth": "Authentification invalide",
+      "unknown": "Erreur inconnue"
+    },
+    "abort": {
+      "already_configured": "Déjà configuré"
+    }
+  }
+}

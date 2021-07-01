@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Parameters of Flood",
+        "description": "Set connection settings.",
+        "data": {
+          "host": "Host (IP or DNS)",
+          "port": "Port",
+          "scan_interval": "Seconds between updates",
+          "username": "Username",
+          "password": "Password",
+          "max_speed_limit": "Max speed limit (kB/s)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Connection error",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unknow error"
+    },
+    "abort": {
+      "already_configured": "Already configured"
+    }
+  }
+}
