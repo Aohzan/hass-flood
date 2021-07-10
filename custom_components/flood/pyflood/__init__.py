@@ -135,13 +135,12 @@ class FloodApi:
 
     async def last_notification(self):
         """Get last notifications."""
-        api_notifications = await self._request(
-            method="GET", url=self._api_url + "notifications"
-        )
-        notifications = api_notifications.get("notifications")
-        if not notifications:
-            return None
-        last_notification = notifications[0]
+        NOTIF = "notifications"
+        api_notifications = await self._request(method="GET", url=self._api_url + NOTIF)
+        if NOTIF not in api_notifications or not api_notifications[NOTIF]:
+            return {"title": "No notification"}
+
+        last_notification = api_notifications[NOTIF][0]
 
         torrent_name = last_notification.get("data").get(
             "name", last_notification.get("data").get("title", "torrent name not found")

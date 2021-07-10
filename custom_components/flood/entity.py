@@ -22,7 +22,7 @@ class FloodEntity(CoordinatorEntity):
         """Initialize the entity."""
         super().__init__(coordinator)
         self._controller = controller
-        self._name = name
+        self._name = f"Flood {name}"
         self._category = category
         self._key = key
         self._icon = icon
