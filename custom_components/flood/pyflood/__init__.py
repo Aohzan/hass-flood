@@ -94,21 +94,21 @@ class FloodApi:
             params={"snapshot": "FIVE_MINUTE"},
         )
         return {
-            "downloadSpeed": history.get("download", [])[-1],
-            "uploadSpeed": history.get("upload", [])[-1],
+            "downloadSpeed": history.get("download")[-1]
+            if history.get("download")
+            else 0,
+            "uploadSpeed": history.get("upload")[-1] if history.get("upload") else 0,
         }
 
-    async def auth(self) -> bool:
+    async def auth(self) -> None:
         """Get authentication status after send credentials."""
         data = await self._request(
             method="POST",
             url=self._api_url + "auth/authenticate",
             content={"username": self._username, "password": self._password},
         )
-        if data.get("success"):
-            return True
-        else:
-            return False
+        if "success" not in data:
+            raise FloodInvalidAuthError()
 
     async def global_get(self) -> dict:
         """Get all data."""
