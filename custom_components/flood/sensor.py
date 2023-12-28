@@ -1,7 +1,7 @@
 """Support for the Flood sensors."""
 import logging
 
-from homeassistant.const import DATA_RATE_KILOBYTES_PER_SECOND
+from homeassistant.const import UnitOfDataRate
 
 from .const import CONTROLLER, COORDINATOR, DOMAIN
 from .entity import FloodEntity
@@ -61,7 +61,7 @@ class FloodSpeedSensorEntity(FloodEntity):
     @property
     def unit_of_measurement(self) -> str:
         """Return the icon to use in the frontend."""
-        return DATA_RATE_KILOBYTES_PER_SECOND
+        return UnitOfDataRate.KILOBYTES_PER_SECOND
 
     @property
     def state(self) -> int:

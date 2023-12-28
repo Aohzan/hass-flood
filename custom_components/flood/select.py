@@ -1,7 +1,7 @@
 """Support for the Flood select."""
 
 from homeassistant.components.select import SelectEntity
-from homeassistant.const import DATA_RATE_KILOBYTES_PER_SECOND
+from homeassistant.const import UnitOfDataRate
 
 from .const import CONTROLLER, COORDINATOR, DOMAIN
 from .entity import FloodEntity
@@ -41,7 +41,7 @@ class FloodSpeedLimitEntity(FloodEntity, SelectEntity):
     @property
     def unit_of_measurement(self) -> str:
         """Return the icon to use in the frontend."""
-        return DATA_RATE_KILOBYTES_PER_SECOND
+        return UnitOfDataRate.KILOBYTES_PER_SECOND
 
     @property
     def current_option(self):
