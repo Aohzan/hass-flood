@@ -5,11 +5,23 @@ The `flood` integration allows you to get information and control your [Flood We
 
 ## Installation
 
+### Marketplace
+
+[![Open your Home Assistant instance and open this repository in the Marketplace.](https://my.home-assistant.io/badges/marketplace_repository.svg)](https://my.home-assistant.io/redirect/marketplace_repository/?owner=Aohzan&repository=hass-flood&category=integration)
+
+Settings > Marketplace > Add from link > `Aohzan/hass-flood` > Add, then Install.
+
+Before Home Assistant 2026.11, install it through HACS the same way.
+
+### Manually
+
 Copy the `custom_components/flood` folder into the config folder.
 
 ## Configuration
 
-To add flood to your installation, go to Configuration >> Integrations in the UI, click the button with + sign and from the list of integrations select Flood.
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=flood)
+
+Or go to Settings > Devices & services > Add integration and select Flood.
 
 ## Lovelace suggestion
 
